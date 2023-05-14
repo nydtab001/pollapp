@@ -1,0 +1,13 @@
+{% extends "pollhome/base.html" %}
+{% block content %}
+    <div class="div">
+      <div style="height: 100%; display: flex; align-items: center;">
+        <form class="home" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="btn2" name="sub" value="red" type="submit">Red Pill</button>
+          <button class="btn3" name="sub" value="blue" type="submit">Blue pill</button>
+        </form>
+      </div>
+    </div>
+{% endblock content %}

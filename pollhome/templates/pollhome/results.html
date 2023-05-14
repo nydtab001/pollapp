@@ -1,0 +1,70 @@
+{% extends "pollhome/base.html" %}
+{% load static %}
+{% load mathfilters %}
+{% block content %}
+    <div class="div">
+      <div style="color:white;font-size:20px;">Total Votes: {{ total }}</div>
+      <div class="div2">
+        <div
+          style="
+            display: flex;
+            height: 100%;
+            width: 400px;
+            justify-content: space-between;
+          "
+        >
+          <div class="bar">
+            <div class="textdisplay">{{ result }}%</div>
+            <div class="bar1"></div>
+          </div>
+          <div class="bar">
+            <div class="textdisplay">{{ 100|sub:result }}%</div>
+            <div class="bar2"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 400px;
+          position: absolute;
+          bottom: 0px;
+          height: 40px;
+          z-index: 9999;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div
+          style="
+            width: 40%;
+            color: white;
+            font-family: Chakra Petch;
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          Red
+        </div>
+        <div
+          style="
+            width: 40%;
+            color: white;
+            font-family: Chakra Petch;
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          Blue
+        </div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'pollhome/src/home.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% endblock %}

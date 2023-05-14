@@ -1,0 +1,17 @@
+{% extends "pollhome/base.html" %}
+{% block content %}
+    <div class="div">
+      <div style="height: 100%; display: flex; align-items: center;">
+        <div class="home">
+          {% if not user.is_authenticated %}
+          <a class="btn2" href="{% url 'register' %}">Register/Login</a>
+          {% else %}
+          {% if not user.vote.has_voted %}
+          <a class="btn2" href="{% url 'poll-home' %}">Vote</a>
+          {% endif %}
+          <a class="btn2" href="{% url 'results' %}">View Results</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+{% endblock %}

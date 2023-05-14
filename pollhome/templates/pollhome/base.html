@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vote</title>
+    <link rel="stylesheet" href="{% static 'pollhome/src/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch">
+  </head>
+
+  <body class="body">
+  {% if user.is_authenticated %}
+  <div style=width:100%;height:fit-content;">
+    <ul style="list-style: none;">
+      <li><div style="font-size:28px;color:white;float: left;width:fit-content">{{ user.username }}</div></li>
+      <li><form style="float: right;" action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button class="mybutton" type="submit">Logout</button>
+      </form></li>
+    </ul>
+  </div>
+  {% endif %}
+  {% block content %}{% endblock %}
+  </body>
+</html>

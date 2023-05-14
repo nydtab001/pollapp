@@ -1,0 +1,138 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+.div {
+  display: flex;
+  height: 60%;
+  width: 100%;
+  flex-direction: column;
+  flex-flow: column wrap;
+  align-items: center;
+  position: absolute;
+  bottom: 20%;
+  justify-content: space-between;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.home{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  bottom: 40px;
+  width: 100%;
+}
+
+.textdisplay {
+  font-size: 25px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 50%;
+  color: white;
+  font-family: Chakra Petch;
+  z-index: 9999;
+}
+
+.btn,
+.btn2,
+.btn3 {
+  background-color: rgb(199, 3, 3);
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 900px;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0px;
+}
+
+.btn2,
+.btn3 {
+  margin: 5px;
+  font-weight: 500px;
+  font-size:40px;
+}
+
+.btn3 {
+  background-color: blue;
+}
+
+.bar,
+.bar1,
+.bar2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  width: 40%;
+}
+
+.bar2,
+.bar1 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.bar1 {
+  background-color: red;
+}
+
+.bar2 {
+  background-color: blue;
+  height: 55%;
+}
+
+.btn:hover,
+.btn2:hover {
+  background-color: rgb(255, 133, 133);
+}
+
+.btn3:hover {
+  background-color: rgb(133, 133, 255);
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.mybutton {
+  background-color: transparent;;
+  cursor: pointer;
+  font-size:28px;
+  color:white;
+  width:fit-content;
+  border: none;
+}
