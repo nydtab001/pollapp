@@ -139,3 +139,5 @@ LOGIN_URL = 'login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+ALLOWED_HOSTS = ['pollapp-ntaboka87.b4a.run','localhost', '127.0.0.1']
